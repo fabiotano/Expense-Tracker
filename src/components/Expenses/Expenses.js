@@ -17,7 +17,7 @@ const Expenses = (props) => {
     filterInfoText = '2019, 2020 & 2022'
   } else if (filteredYear === '2022') {
     filterInfoText = '2019, 2020 & 2021'
-  }
+  } // este codigo se repite cada vez que actualiza el selectedYear (Derived State)
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);  
