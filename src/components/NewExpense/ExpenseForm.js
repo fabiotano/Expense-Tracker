@@ -17,6 +17,8 @@ export default function ExpenseForm(props) {
     setEnteredDate(event.target.value);
   }
 
+  const today = new Date().toISOString().split('T')[0];
+
   /* a way to gather all the states:
     const inputChangeHandler = (identifier, value) => {
     if (identifier === "title") {
@@ -74,7 +76,7 @@ export default function ExpenseForm(props) {
           <input
             type="date"
             min="2019-01-01"
-            max="2022-12-31"
+            max={today}
             value={enteredDate}
             onChange={dateChangeHandler}
           />

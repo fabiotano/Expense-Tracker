@@ -7,17 +7,17 @@ import ExpensesChart from "./ExpensesChart";
 import "./Expenses.css";
 
 const Expenses = (props) => {
-  const [filteredYear, setFilteredYear] = useState("2020");
+  const [filteredYear, setFilteredYear] = useState("2022");
 
-  let filterInfoText = "2019, 2021 & 2022";
+  // let filterInfoText = "2019, 2021 & 2022";
 
-  if (filteredYear === "2019") {
-    filterInfoText = "2020, 2021 & 2022";
-  } else if (filteredYear === "2021") {
-    filterInfoText = "2019, 2020 & 2022";
-  } else if (filteredYear === "2022") {
-    filterInfoText = "2019, 2020 & 2021";
-  } // este codigo se repite cada vez que actualiza el selectedYear (Derived State)
+  // if (filteredYear === "2019") {
+  //   filterInfoText = "2020, 2021 & 2022";
+  // } else if (filteredYear === "2021") {
+  //   filterInfoText = "2019, 2020 & 2022";
+  // } else if (filteredYear === "2022") {
+  //   filterInfoText = "2019, 2020 & 2021";
+  // } // este codigo se repite cada vez que actualiza el selectedYear (Derived State)
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
